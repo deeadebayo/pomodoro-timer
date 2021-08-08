@@ -1,5 +1,6 @@
 import React from 'react';
 import { minutesToDuration } from "../utils/duration";
+import PropTypes from "prop-types";
 
 const PomodoroSessionDurations = ({ session, focusDuration, breakDuration, handleTimerAdjust }) => (
     <div className="row">
@@ -58,5 +59,11 @@ const PomodoroSessionDurations = ({ session, focusDuration, breakDuration, handl
     </div>
 )
 
+PomodoroSessionDurations.propTypes = {
+    session: PropTypes.object,
+    focusDuration: PropTypes.number,
+    breakDuration: PropTypes.number,
+    handleTimerAdjust: PropTypes.func
+}
 
 export default PomodoroSessionDurations

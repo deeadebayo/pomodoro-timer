@@ -1,5 +1,6 @@
 import React from 'react';
 import classNames from "../utils/class-names";
+import PropTypes from "prop-types";
 
 const PomodoroTimerControls = ({ session, playPause, handleStopButton, isTimerRunning }) => {
     const disabled = !session
@@ -39,6 +40,13 @@ const PomodoroTimerControls = ({ session, playPause, handleStopButton, isTimerRu
                 </div>
             </div>
         </div>)
+}
+
+PomodoroTimerControls.propTypes = {
+    session: PropTypes.object,
+    playPause: PropTypes.func,
+    handleStopButton: PropTypes.func,
+    isTimerRunning: PropTypes.bool
 }
 
 export default PomodoroTimerControls
