@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import classNames from "../utils/class-names";
-import { minutesToDuration, secondsToDuration } from "../utils/duration";
 import useInterval from "../utils/useInterval";
 import PomodoroCurrentSession from "./PomodoroCurrentSession";
 import PomodoroSessionDurations from "./PomodoroSessionDurations";

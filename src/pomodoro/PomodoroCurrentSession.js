@@ -1,8 +1,8 @@
 import React from 'react';
 import { minutesToDuration, secondsToDuration } from "../utils/duration";
 
-const PomodoroCurrentSession = ({ session, focusDuration, breakDuration }) => {
-    const progressBarDisplay = session?.label === 'Focusing' ? ((focusDuration * 60 - session?.timeRemaining) / focusDuration) : ((breakDuration * 60 - session?.timeRemaining) / breakDuration)
+const PomodoroCurrentSession = ({ session, focusDuration, breakDuration, ariaTimer }) => {
+    const progressBarDisplay = session?.label === 'Focusing' ? (100 * (focusDuration * 60 - session?.timeRemaining) / (focusDuration * 60)) : (100 * (breakDuration * 60 - session?.timeRemaining) / (breakDuration * 60))
 
     if (!session) return null
     return (
